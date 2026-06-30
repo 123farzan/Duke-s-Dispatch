@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Contact Dukes Dispatch Services. Call 573-298-8254, 24/7. USA dispatch partner for owner-operators and small fleets." />
+<title>Contact · Dukes Dispatch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="ticker" role="status">
+  <div class="ticker__track">
+    <span>● <strong>247</strong> trucks rolling</span>
+    <span>● <strong>$2.85/mi</strong> avg rate this week</span>
+    <span>● <strong>14 min</strong> avg broker callback</span>
+    <span>● <strong>0</strong> forced dispatch loads today</span>
+    <span>● <strong>Since 2006</strong> owner-operator owned & operated</span>
+    <span>● <strong>247</strong> trucks rolling</span>
+    <span>● <strong>$2.85/mi</strong> avg rate this week</span>
+    <span>● <strong>14 min</strong> avg broker callback</span>
+    <span>● <strong>0</strong> forced dispatch loads today</span>
+    <span>● <strong>Since 2006</strong> owner-operator owned & operated</span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="logo-mark">DD</span>
+      <span class="logo-text">DUKES<em>·</em>DISPATCH</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="index.html#dispatch-floor">Dispatch Floor</a>
+      <a href="index.html#how">How It Works</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html" class="is-muted">Privacy</a>
+    </nav>
+    <a href="tel:+15732988254" class="nav__cta"><span class="pulse"></span> 573-298-8254</a>
+    <button class="nav__burger" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<section class="contact-wrap">
+
+  <div class="contact-info">
+    <div class="breadcrumb"><a href="index.html">HOME</a> / CONTACT</div>
+    <h2>Dispatch floor<br>is open 24/7.</h2>
+    <p>Call us, email us, or fill out the form. A real dispatcher — not a sales rep, not a chatbot — will get back to you within minutes. Most of the time, before you finish the form.</p>
+
+    <div class="contact-detail">
+      <strong>Call</strong>
+      <a href="tel:+15732988254">573-298-8254</a>
+    </div>
+    <div class="contact-detail">
+      <strong>Email</strong>
+      <a href="mailto:info@dukesdispatchservices.com">info@dukesdispatchservices.com</a>
+    </div>
+    <div class="contact-detail">
+      <strong>HQ</strong>
+      <span>117 S Lexington St, Ste 4326<br>Harrisonville, MO 64701</span>
+    </div>
+    <div class="contact-detail">
+      <strong>Hours</strong>
+      <span>Mon–Sun · 24/7/365<br>Dispatchers on call at all hours</span>
+    </div>
+  </div>
+
+  <form class="form" onsubmit="event.preventDefault(); document.getElementById('form-ok').style.display='block'; this.style.display='none';">
+    <h3>Request a quote</h3>
+    <div class="form-row">
+      <label>Your name
+        <input type="text" placeholder="e.g. Mike Johnson" required>
+      </label>
+      <label>Phone
+        <input type="tel" placeholder="(555) 123-4567" required>
+      </label>
+    </div>
+    <label>Email
+      <input type="email" placeholder="mike@truckingco.com" required>
+    </label>
+    <div class="form-row">
+      <label>Equipment
+        <select required>
+          <option value="">Select equipment</option>
+          <option>Dry Van</option>
+          <option>Reefer</option>
+          <option>Flatbed</option>
+          <option>Step Deck</option>
+          <option>Hotshot</option>
+          <option>Box Truck</option>
+          <option>Power Only</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <label>Plan
+        <select required>
+          <option value="">Select plan</option>
+          <option>Paperwork Only — $175/wk</option>
+          <option>Basic Dispatch — $425/wk</option>
+          <option>Professional — $695/wk</option>
+          <option>Not sure yet</option>
+        </select>
+      </label>
+    </div>
+    <label>Tell us about your operation
+      <textarea placeholder="How many trucks? What lanes are you running? What dispatcher do you currently use and what do you want to change?"></textarea>
+    </label>
+    <button type="submit" class="btn btn--primary btn--block">Send to dispatch →</button>
+    <small style="font-family:var(--mono);font-size:11px;color:var(--text-mute);text-align:center;letter-spacing:.06em;">A real human will respond within 30 minutes.</small>
+  </form>
+
+  <div id="form-ok" style="display:none;background:linear-gradient(180deg,#0f1f18,#0a1612);border:1px solid rgba(45,212,164,.3);border-radius:18px;padding:36px;text-align:center;">
+    <div style="font-family:var(--mono);font-size:13px;color:var(--green);letter-spacing:.18em;margin-bottom:14px;">— REQUEST RECEIVED</div>
+    <h3 style="font-size:28px;letter-spacing:-.02em;margin:0 0 12px;">We'll be in touch shortly.</h3>
+    <p style="font-size:15px;color:var(--text-dim);margin:0 0 24px;">A dispatcher will call you back within 30 minutes. If it's urgent, don't wait — call us directly.</p>
+    <a href="tel:+15732988254" class="btn btn--primary">Call 573-298-8254</a>
+  </div>
+
+</section>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <span class="logo-mark logo-mark--lg">DD</span>
+      <span class="logo-text logo-text--lg">DUKES<em>·</em>DISPATCH</span>
+      <p>USA dispatch partner for owner-operators and small fleets. Flat fees, no games, since 2006.</p>
+      <address>117 S Lexington St, Ste 4326<br>Harrisonville, MO 64701</address>
+    </div>
+    <div class="footer__col">
+      <h4>SERVICES</h4>
+      <a href="services.html">All services</a>
+      <a href="services.html#dry-van">Dry Van</a>
+      <a href="services.html#reefer">Reefer</a>
+      <a href="services.html#flatbed">Flatbed</a>
+      <a href="services.html#hotshot">Hotshot</a>
+    </div>
+    <div class="footer__col">
+      <h4>COMPANY</h4>
+      <a href="about.html">About us</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="index.html#proof">Operators</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+    <div class="footer__col">
+      <h4>DISPATCH</h4>
+      <a href="tel:+15732988254">573-298-8254</a>
+      <a href="mailto:info@dukesdispatchservices.com">info@...</a>
+      <span>Mon–Sun · 24/7</span>
+    </div>
+  </div>
+  <div class="footer__bot">
+    <span>© 2006–2026 Dukes Dispatch Services LLC. All rights reserved.</span>
+    <span>Built for the long haul.</span>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

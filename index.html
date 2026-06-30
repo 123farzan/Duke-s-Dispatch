@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Dukes Dispatch Services — A 20-year USA dispatch partner for owner-operators. Flat fees, no forced dispatch, you keep 100% of your load pay. 24/7 personal dispatcher." />
+<title>Dukes Dispatch Services — You Drive. We Handle The Rest.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== STICKY TICKER ===== -->
+<div class="ticker" role="status" aria-label="Live dispatch activity">
+  <div class="ticker__track">
+    <span>● <strong>247</strong> trucks rolling</span>
+    <span>● <strong>$2.85/mi</strong> avg rate this week</span>
+    <span>● <strong>14 min</strong> avg broker callback</span>
+    <span>● <strong>0</strong> forced dispatch loads today</span>
+    <span>● <strong>Since 2006</strong> owner-operator owned & operated</span>
+    <!-- duplicate for seamless loop -->
+    <span>● <strong>247</strong> trucks rolling</span>
+    <span>● <strong>$2.85/mi</strong> avg rate this week</span>
+    <span>● <strong>14 min</strong> avg broker callback</span>
+    <span>● <strong>0</strong> forced dispatch loads today</span>
+    <span>● <strong>Since 2006</strong> owner-operator owned & operated</span>
+  </div>
+</div>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="logo-mark">DD</span>
+      <span class="logo-text">DUKES<em>·</em>DISPATCH</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#dispatch-floor">Dispatch Floor</a>
+      <a href="#how">How It Works</a>
+      <a href="#equipment">Equipment</a>
+      <a href="#rates">Rates</a>
+      <a href="#proof">Operators</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html" class="is-muted">Privacy</a>
+    </nav>
+    <a href="tel:+15732988254" class="nav__cta">
+      <span class="pulse"></span> 573-298-8254
+    </a>
+    <button class="nav__burger" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="hero__grid"></div>
+    <div class="hero__glow"></div>
+  </div>
+
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <div class="eyebrow">
+        <span class="eyebrow__dot"></span>
+        Dispatch floor open · 24/7/365
+      </div>
+      <h1 class="hero__title">
+        You keep <span class="hl">100%</span><br>
+        of your <span class="hl hl--amber">load pay</span>.<br>
+        We handle <span class="hl">the rest.</span>
+      </h1>
+      <p class="hero__sub">
+        Flat-fee dispatch for owner-operators and small fleets across the USA.
+        No percentage skims. No forced dispatch. Just one personal dispatcher
+        who picks up the phone and finds you the next best load.
+      </p>
+
+      <div class="hero__cta">
+        <a href="contact.html" class="btn btn--primary">
+          Get Rolling
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#rates" class="btn btn--ghost">See the rates →</a>
+      </div>
+
+      <div class="hero__trust">
+        <div><strong>20+</strong><span>years on the radio</span></div>
+        <div><strong>100%</strong><span>US-based dispatchers</span></div>
+        <div><strong>0%</strong><span>cut of your load pay</span></div>
+      </div>
+    </div>
+
+    <!-- LIVE DISPATCH COCKPIT UI -->
+    <div class="cockpit" aria-hidden="true">
+      <div class="cockpit__frame">
+        <div class="cockpit__bar">
+          <span class="cockpit__dot"></span>
+          <span class="cockpit__dot"></span>
+          <span class="cockpit__dot"></span>
+          <span class="cockpit__path">dukes · dispatch · live</span>
+          <span class="cockpit__time" id="cockpit-time">02:47:18</span>
+        </div>
+
+        <div class="cockpit__grid">
+          <!-- Active route card -->
+          <div class="panel panel--route">
+            <div class="panel__head">
+              <span class="panel__label">ROUTE ACTIVE</span>
+              <span class="badge badge--live">● LIVE</span>
+            </div>
+            <div class="route">
+              <div class="route__city">
+                <span class="route__city-name">ATLANTA</span>
+                <span class="route__city-state">GA</span>
+              </div>
+              <div class="route__line">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="route__truck">
+                <svg viewBox="0 0 64 32" fill="currentColor"><path d="M2 22h6V12h28l8 8h12v8h-4a4 4 0 1 1-8 0H32a4 4 0 1 1-8 0H2z"/></svg>
+              </div>
+              <div class="route__city">
+                <span class="route__city-name">DALLAS</span>
+                <span class="route__city-state">TX</span>
+              </div>
+            </div>
+            <div class="route__stats">
+              <div><span>MI LOADED</span><strong>847</strong></div>
+              <div><span>RATE / MI</span><strong>$2.85</strong></div>
+              <div><span>GROSS</span><strong>$2,414</strong></div>
+            </div>
+          </div>
+
+          <!-- Dispatcher card -->
+          <div class="panel panel--dispatch">
+            <div class="panel__head">
+              <span class="panel__label">YOUR DISPATCHER</span>
+              <span class="badge badge--on">ON CALL</span>
+            </div>
+            <div class="dispatcher">
+              <div class="dispatcher__avatar">MR</div>
+              <div>
+                <strong>MARCUS R.</strong>
+                <span>8 yrs · Flatbed & Reefer</span>
+              </div>
+            </div>
+            <p class="panel__quote">"Booked you Atlanta → Dallas, $2.85. Brokers' credit cleared. Want me to look at the next one?"</p>
+          </div>
+
+          <!-- Load board mini -->
+          <div class="panel panel--loads">
+            <div class="panel__head">
+              <span class="panel__label">NEXT LOADS</span>
+              <span class="panel__sub">matched for your rig</span>
+            </div>
+            <ul class="loads">
+              <li>
+                <span class="loads__lane">DAL → PHX</span>
+                <span class="loads__rate">$3.10/mi</span>
+              </li>
+              <li>
+                <span class="loads__lane">ATL → MEM</span>
+                <span class="loads__rate">$2.95/mi</span>
+              </li>
+              <li>
+                <span class="loads__lane">DAL → HOU</span>
+                <span class="loads__rate">$2.75/mi</span>
+              </li>
+              <li>
+                <span class="loads__lane">MEM → ATL</span>
+                <span class="loads__rate">$2.90/mi</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Money card -->
+          <div class="panel panel--money">
+            <div class="panel__head">
+              <span class="panel__label">YOUR PAY · THIS WEEK</span>
+            </div>
+            <div class="money">
+              <div class="money__big">
+                <span class="money__cur">$</span>4,718<small>.40</small>
+              </div>
+              <div class="money__row">
+                <span>Dispatch fee</span>
+                <span class="money__zero">$0.00</span>
+              </div>
+              <div class="money__row">
+                <span>Hidden fees</span>
+                <span class="money__zero">$0.00</span>
+              </div>
+              <div class="money__row money__row--total">
+                <span>You keep</span>
+                <span>100%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cockpit__bar cockpit__bar--bot">
+          <span class="kbd">F8</span> check call
+          <span class="kbd">F9</span> next load
+          <span class="kbd">F10</span> rate confirm
+          <span class="status">ALL SYSTEMS NOMINAL</span>
+        </div>
+      </div>
+
+      <!-- Floating badges around cockpit -->
+      <div class="float-tag float-tag--1">
+        <strong>$0</strong><span>skims on your pay</span>
+      </div>
+      <div class="float-tag float-tag--2">
+        <strong>24/7</strong><span>real human answers</span>
+      </div>
+      <div class="float-tag float-tag--3">
+        <strong>14m</strong><span>avg broker response</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">
+    <span>SCROLL</span>
+    <span class="hero__scroll-line"></span>
+  </div>
+</section>
+
+<!-- ===== TRUST STRIP ===== -->
+<section class="strip">
+  <div class="strip__inner">
+    <span class="strip__label">TRUSTED BY CARRIERS RUNNING</span>
+    <div class="strip__marquee">
+      <span>DRY VAN</span><span>·</span>
+      <span>REEFER</span><span>·</span>
+      <span>FLATBED</span><span>·</span>
+      <span>STEP DECK</span><span>·</span>
+      <span>HOTSHOT</span><span>·</span>
+      <span>BOX TRUCK</span><span>·</span>
+      <span>POWER ONLY</span><span>·</span>
+      <span>TEAMS</span><span>·</span>
+      <!-- duplicate -->
+      <span>DRY VAN</span><span>·</span>
+      <span>REEFER</span><span>·</span>
+      <span>FLATBED</span><span>·</span>
+      <span>STEP DECK</span><span>·</span>
+      <span>HOTSHOT</span><span>·</span>
+      <span>BOX TRUCK</span><span>·</span>
+      <span>POWER ONLY</span><span>·</span>
+      <span>TEAMS</span><span>·</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DISPATCH FLOOR ===== -->
+<section class="floor" id="dispatch-floor">
+  <div class="section-head">
+    <span class="section-head__kicker">— THE DISPATCH FLOOR</span>
+    <h2>A real human. A real route.<br>No scripts, no chatbots.</h2>
+    <p>When you call Dukes, you get a dispatcher who's been doing this for 8+ years — not a call center reading from a screen.</p>
+  </div>
+
+  <div class="floor__grid">
+    <article class="op op--1">
+      <div class="op__num">01</div>
+      <h3>You keep <span>100%</span> of your load pay</h3>
+      <p>Flat weekly fee. We don't take a slice of your gross. A $4,000 load is $4,000 — minus our flat, which we tell you upfront.</p>
+      <div class="op__metric">
+        <span>Industry avg. cut</span><strong>8–12%</strong>
+      </div>
+    </article>
+
+    <article class="op op--2">
+      <div class="op__num">02</div>
+      <h3><span>No forced dispatch.</span> Ever.</h3>
+      <p>You hate a load? Turn it down. Hate the lane? Don't run it. You're the operator. We're the radio in your ear.</p>
+      <div class="op__metric">
+        <span>Loads declined YTD</span><strong>11,482</strong>
+      </div>
+    </article>
+
+    <article class="op op--3">
+      <div class="op__num">03</div>
+      <h3>We <span>negotiate</span>, you roll</h3>
+      <p>Top-paying loads on vetted brokers. We check credit, do the paperwork, send your rate confirmation before you hang up.</p>
+      <div class="op__metric">
+        <span>Avg rate this quarter</span><strong>$2.85/mi</strong>
+      </div>
+    </article>
+
+    <article class="op op--4">
+      <div class="op__num">04</div>
+      <h3>Back-office <span>without the headache</span></h3>
+      <p>Insurance certs, factoring setup, fuel advances, detention follow-up, TONUs, weekly invoices — done. So you can drive.</p>
+      <div class="op__metric">
+        <span>Avg hrs/wk saved</span><strong>11.5</strong>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how" id="how">
+  <div class="how__inner">
+    <div class="section-head section-head--left">
+      <span class="section-head__kicker">— HOW IT WORKS</span>
+      <h2>Onboarded in 48 hours.<br>Rolling the same week.</h2>
+    </div>
+
+    <ol class="steps">
+      <li class="step">
+        <div class="step__num">01</div>
+        <h3>Talk to a human</h3>
+        <p>Call Marcus, TJ, or Shay. Five minutes. We learn your rig, your lanes, your goals. No form fill-out hell.</p>
+        <span class="step__time">~5 min</span>
+      </li>
+      <li class="step">
+        <div class="step__num">02</div>
+        <h3>Pick your plan</h3>
+        <p>Paperwork Only, Basic, or Professional. Flat fee in writing. No hidden charges, no up-sells, no surprises.</p>
+        <span class="step__time">~10 min</span>
+      </li>
+      <li class="step">
+        <div class="step__num">03</div>
+        <h3>We get you set up</h3>
+        <p>Carrier packets, broker credit checks, factoring (if you need it), insurance certs, fuel cards. We chase the paperwork, not you.</p>
+        <span class="step__time">24–48 hrs</span>
+      </li>
+      <li class="step">
+        <div class="step__num">04</div>
+        <h3>First load booked</h3>
+        <p>Your dedicated dispatcher sends your first load. Rate confirm, broker info, directions — all in your inbox before pickup.</p>
+        <span class="step__time">Same week</span>
+      </li>
+      <li class="step">
+        <div class="step__num">05</div>
+        <h3>You keep driving</h3>
+        <p>Check calls when you want. Loads when you want them. Quit anytime, no contract, no penalty. That's it.</p>
+        <span class="step__time">Forever</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== EQUIPMENT ===== -->
+<section class="equipment" id="equipment">
+  <div class="section-head">
+    <span class="section-head__kicker">— WHAT WE HAUL</span>
+    <h2>Dispatchers who know <em>your</em> equipment.</h2>
+    <p>Not a generic load-board spammer. A specialist who knows your trailer's quirks, your state's permit maze, and the brokers who pay top dollar for your rig.</p>
+  </div>
+
+  <div class="equipment__grid">
+    <a href="services.html#dry-van" class="eq">
+      <div class="eq__icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="14" width="40" height="22" rx="1"/><circle cx="14" cy="40" r="3"/><circle cx="34" cy="40" r="3"/></svg>
+      </div>
+      <h3>Dry Van</h3>
+      <p>Daily freight, RPM-focused routing, no-touch drop-and-hook.</p>
+      <span class="eq__stat">Avg <strong>$2.70/mi</strong></span>
+    </a>
+    <a href="services.html#reefer" class="eq">
+      <div class="eq__icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 14h32v22H8zM8 14l4-6h24l4 6"/><path d="M14 36v4M34 36v4"/></svg>
+      </div>
+      <h3>Reefer</h3>
+      <p>Temp-controlled freight, 24/7 monitoring, produce & protein lanes.</p>
+      <span class="eq__stat">Avg <strong>$2.95/mi</strong></span>
+    </a>
+    <a href="services.html#flatbed" class="eq">
+      <div class="eq__icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="20" width="40" height="6"/><path d="M8 20v-6M40 20v-6M14 20v-6M34 20v-6"/></svg>
+      </div>
+      <h3>Flatbed</h3>
+      <p>Secure freight, permit handling, oversized and step-deck specialists.</p>
+      <span class="eq__stat">Avg <strong>$3.10/mi</strong></span>
+    </a>
+    <a href="services.html#hotshot" class="eq">
+      <div class="eq__icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 32h12V18h14v14h14"/><circle cx="12" cy="36" r="3"/><circle cx="36" cy="36" r="3"/></svg>
+      </div>
+      <h3>Hotshot</h3>
+      <p>Expedited freight, urgent loads, premium rates for speed.</p>
+      <span class="eq__stat">Avg <strong>$3.40/mi</strong></span>
+    </a>
+    <a href="services.html#box-truck" class="eq">
+      <div class="eq__icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="10" width="26" height="28"/><path d="M32 18h10v20H32z"/></svg>
+      </div>
+      <h3>Box Truck</h3>
+      <p>Last-mile, LTL conversion, regional lanes under 300mi.</p>
+      <span class="eq__stat">Avg <strong>$2.55/mi</strong></span>
+    </a>
+    <a href="services.html#power-only" class="eq">
+      <div class="eq__icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 28h6V14h20v14h14"/><circle cx="12" cy="32" r="3"/><circle cx="36" cy="32" r="3"/></svg>
+      </div>
+      <h3>Power Only</h3>
+      <p>Drop-and-hook trailers, dedicated partner fleets.</p>
+      <span class="eq__stat">Avg <strong>$2.60/mi</strong></span>
+    </a>
+  </div>
+</section>
+
+<!-- ===== RATES / PRICING ===== -->
+<section class="rates" id="rates">
+  <div class="section-head">
+    <span class="section-head__kicker">— FLAT FEES. NO GAMES.</span>
+    <h2>Pick a plan. Pay one number.<br>Keep everything else.</h2>
+    <p>Every plan comes with the same things competitors charge extra for. The only difference is how much you want us to do.</p>
+  </div>
+
+  <div class="rates__grid">
+    <div class="plan">
+      <header class="plan__head">
+        <h3>Paperwork Only</h3>
+        <p>You book the load. We do the rest.</p>
+      </header>
+      <div class="plan__price">
+        <span class="plan__currency">$</span>175<span class="plan__period">/wk</span>
+      </div>
+      <ul class="plan__list">
+        <li>Setup paperwork & carrier packets</li>
+        <li>Fax/email rate confirmations</li>
+        <li>Credit checks on brokers</li>
+        <li>Send you invoices every week</li>
+        <li>TONU filing</li>
+        <li>Insurance certificate requests</li>
+      </ul>
+      <a href="contact.html" class="btn btn--ghost btn--block">Start Paperwork →</a>
+    </div>
+
+    <div class="plan plan--featured">
+      <div class="plan__ribbon">MOST POPULAR</div>
+      <header class="plan__head">
+        <h3>Basic Dispatch</h3>
+        <p>Your own dispatcher, finding loads while you drive.</p>
+      </header>
+      <div class="plan__price">
+        <span class="plan__currency">$</span>425<span class="plan__period">/wk</span>
+      </div>
+      <ul class="plan__list">
+        <li><strong>Everything in Paperwork</strong></li>
+        <li>A dedicated personal dispatcher</li>
+        <li>Load negotiation & booking</li>
+        <li>24/7 dispatch support</li>
+        <li>Detention & lumper reimbursement help</li>
+        <li>Fuel advance requests</li>
+        <li>Quick pay negotiation</li>
+      </ul>
+      <a href="contact.html" class="btn btn--primary btn--block">Start Dispatching →</a>
+    </div>
+
+    <div class="plan">
+      <header class="plan__head">
+        <h3>Professional</h3>
+        <p>The full back office handled.</p>
+      </header>
+      <div class="plan__price">
+        <span class="plan__currency">$</span>695<span class="plan__period">/wk</span>
+      </div>
+      <ul class="plan__list">
+        <li><strong>Everything in Basic</strong></li>
+        <li>Factoring setup & coordination</li>
+        <li>Collection assistance on aged invoices</li>
+        <li>Driver director coaching</li>
+        <li>ELD & compliance support</li>
+        <li>Permit handling for 48 states</li>
+      </ul>
+      <a href="contact.html" class="btn btn--ghost btn--block">Go Pro →</a>
+    </div>
+  </div>
+
+  <p class="rates__note">
+    Team operations &amp; specialty equipment quoted custom.
+    <a href="contact.html">Get a quote →</a>
+  </p>
+</section>
+
+<!-- ===== COMPARISON ===== -->
+<section class="compare">
+  <div class="compare__inner">
+    <div class="section-head section-head--left">
+      <span class="section-head__kicker">— THE COMPARISON YOU WERE LOOKING FOR</span>
+      <h2>What other dispatchers charge.<br>What they leave out.</h2>
+    </div>
+
+    <div class="compare__grid">
+      <div class="compare__col compare__col--them">
+        <h3>Other dispatchers</h3>
+        <ul>
+          <li><span class="x">✕</span> Take 8–12% of your gross</li>
+          <li><span class="x">✕</span> "Recommended" brokers, not vetted</li>
+          <li><span class="x">✕</span> Forced dispatch on slow weeks</li>
+          <li><span class="x">✕</span> Detention fee? That's on you</li>
+          <li><span class="x">✕</span> Call center reading scripts</li>
+          <li><span class="x">✕</span> 12-month contract, auto-renew</li>
+          <li><span class="x">✕</span> Quitting = paying out the contract</li>
+        </ul>
+      </div>
+      <div class="compare__col compare__col--us">
+        <h3>Dukes Dispatch</h3>
+        <ul>
+          <li><span class="check">✓</span> Flat fee. You keep every dollar of the load</li>
+          <li><span class="check">✓</span> Brokers we trust, vetted credit-checked</li>
+          <li><span class="check">✓</span> No forced dispatch — refuse any load</li>
+          <li><span class="check">✓</span> We fight for detention on your behalf</li>
+          <li><span class="check">✓</span> 8+ yr dispatchers who know the lanes</li>
+          <li><span class="check">✓</span> No contract. Cancel any week</li>
+          <li><span class="check">✓</span> Quit any time, no penalty</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="proof" id="proof">
+  <div class="section-head">
+    <span class="section-head__kicker">— WORD FROM THE CAB</span>
+    <h2>Operators who've rolled with us.</h2>
+  </div>
+
+  <div class="proof__grid">
+    <figure class="quote">
+      <blockquote>"I was paying 9% to my last dispatcher and eating $300+ deadhead miles a week. Switched to Dukes, kept $11,400 my first quarter."</blockquote>
+      <figcaption>
+        <strong>— J. Martinez</strong>
+        <span>Owner-op · Reefer · Texas</span>
+      </figcaption>
+    </figure>
+    <figure class="quote">
+      <blockquote>"Marcus answers his phone at 11pm. My last dispatcher sent me to voicemail and emailed three days later. That's the difference."</blockquote>
+      <figcaption>
+        <strong>— S. Patel</strong>
+        <span>Owner-op · Flatbed · Georgia</span>
+      </figcaption>
+    </figure>
+    <figure class="quote">
+      <blockquote>"Five years in, two trucks. They've handled factoring setup, broker credits, even walked me through an audit. Partners, not vendors."</blockquote>
+      <figcaption>
+        <strong>— R. Collins</strong>
+        <span>Small fleet · Dry Van · Tennessee</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq">
+  <div class="faq__inner">
+    <div class="section-head section-head--left">
+      <span class="section-head__kicker">— THE STRAIGHT ANSWERS</span>
+      <h2>What operators ask first.</h2>
+    </div>
+
+    <details class="faq-item" open>
+      <summary>Do you really take 0% of my load pay?</summary>
+      <p>Yes. We charge a flat weekly fee — $175, $425, or $695 — regardless of how much you gross that week. A $5,000 load and a $500 load cost us the same. The work is the same. We don't get paid more if you do.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Can I really turn down loads?</summary>
+      <p>Yes. That's the whole point of "no forced dispatch." If the rate is bad, the lane is bad, or you just don't want it — say so. We'll find you one you do want.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Am I locked into a contract?</summary>
+      <p>No. We work week-to-week. Quit on a Tuesday, you're not paying for next Tuesday. We earn your business every week — and we know it.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What if I'm new — no MC, no authority yet?</summary>
+      <p>We help with that too. MC authority setup, EIN, IRP, IFTA, UCR — the paperwork maze that takes most new carriers 6 weeks, we can cut to 2. Add it to the Professional plan.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What's your avg rate per mile?</summary>
+      <p>Depends on equipment and lane, but our carriers averaged $2.85/mi last quarter — that's nearly 50¢ better than the load-board average. The real number for your rig comes from a 5-minute call.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Where are your dispatchers located?</summary>
+      <p>Harrisonville, Missouri — and a few in Texas. All US-based. No overseas call centers. When you call, you talk to your dispatcher, not a queue.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final">
+  <div class="final__inner">
+    <div class="final__copy">
+      <span class="section-head__kicker">— STOP LEAVING MONEY AT TRUCKSTOPS</span>
+      <h2>One call. Five minutes.<br>A plan you can keep driving with.</h2>
+      <p>Talk to a real dispatcher. Hear the lanes we're booking this week. No pitch deck, no pressure. If we're not the right fit, we'll tell you.</p>
+    </div>
+    <div class="final__card">
+      <div class="final__card-head">
+        <span class="final__card-dot"></span>
+        <span>Dispatch floor — open now</span>
+      </div>
+      <a href="tel:+15732988254" class="final__phone">573-298-8254</a>
+      <ul class="final__list">
+        <li>✓ Talk to a dispatcher in &lt;2 min</li>
+        <li>✓ Flat quote on the spot</li>
+        <li>✓ Set up in 24–48 hrs</li>
+        <li>✓ No contract, no pressure</li>
+      </ul>
+      <a href="contact.html" class="btn btn--primary btn--block">Request a quote →</a>
+      <a href="mailto:info@dukesdispatchservices.com" class="final__email">info@dukesdispatchservices.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <span class="logo-mark logo-mark--lg">DD</span>
+      <span class="logo-text logo-text--lg">DUKES<em>·</em>DISPATCH</span>
+      <p>USA dispatch partner for owner-operators and small fleets. Flat fees, no games, since 2006.</p>
+      <address>117 S Lexington St, Ste 4326<br>Harrisonville, MO 64701</address>
+    </div>
+
+    <div class="footer__col">
+      <h4>SERVICES</h4>
+      <a href="services.html">All services</a>
+      <a href="services.html#dry-van">Dry Van</a>
+      <a href="services.html#reefer">Reefer</a>
+      <a href="services.html#flatbed">Flatbed</a>
+      <a href="services.html#hotshot">Hotshot</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>COMPANY</h4>
+      <a href="about.html">About us</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="#proof">Operators</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>DISPATCH</h4>
+      <a href="tel:+15732988254">573-298-8254</a>
+      <a href="mailto:info@dukesdispatchservices.com">info@...</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <span>Mon–Sun · 24/7</span>
+    </div>
+  </div>
+  <div class="footer__bot">
+    <span>© 2006–2026 Dukes Dispatch Services LLC. All rights reserved.</span>
+    <span>Built for the long haul.</span>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
