@@ -128,9 +128,17 @@ document.querySelectorAll('.faq-item summary')?.forEach(s => {
 (function whatsappCTA(){
   const a = document.getElementById('nav-whatsapp');
   if(!a) return;
+  const targetUrl = a.getAttribute('href') || 'https://wa.me/15732988254';
   a.addEventListener('click', (e) => {
     e.preventDefault();
-    window.open('https://wa.me/15732988254', '_blank', 'noopener');
+    try {
+      const popup = window.open(targetUrl, '_blank', 'noopener,noreferrer');
+      if(!popup){
+        window.location.href = targetUrl;
+      }
+    } catch (err) {
+      window.location.href = targetUrl;
+    }
   });
 })();
 
