@@ -123,3 +123,52 @@ document.querySelectorAll('.faq-item summary')?.forEach(s => {
     });
   });
 });
+
+// Navbar phone CTA → WhatsApp chat
+(function whatsappCTA(){
+  const a = document.getElementById('nav-whatsapp');
+  if(!a) return;
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.open('https://wa.me/15732988254', '_blank', 'noopener');
+  });
+})();
+
+// Contact form → mailto:info@dukesdispatchservices.com
+(function contactForm(){
+  const form = document.getElementById('contact-form');
+  if(!form) return;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const get = (k) => (data.get(k) || '').toString().trim();
+    const name     = get('name')     || 'Not provided';
+    const phone    = get('phone')    || 'Not provided';
+    const email    = get('email')    || 'Not provided';
+    const equip    = get('equipment')|| 'Not provided';
+    const plan     = get('plan')     || 'Not provided';
+    const message  = get('message')  || 'No additional details provided.';
+
+    const subject = `New Dispatch Inquiry — ${name} (${equip})`;
+    const body =
+`Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Equipment: ${equip}
+Plan: ${plan}
+
+Operation details:
+${message}
+
+—
+Sent from dukesdispatchservices.com contact form`;
+
+    const mailto = `mailto:info@dukesdispatchservices.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+
+    // Show the existing success card and hide the form
+    form.style.display = 'none';
+    const ok = document.getElementById('form-ok');
+    if(ok) ok.style.display = 'block';
+  });
+})();

@@ -42,7 +42,7 @@
       <a href="contact.html">Contact</a>
       <a href="privacy.html" class="is-muted">Privacy</a>
     </nav>
-    <a href="tel:+15732988254" class="nav__cta"><span class="pulse"></span> 573-298-8254</a>
+    <a href="https://wa.me/15732988254" class="nav__cta" id="nav-whatsapp" data-phone="+15732988254" target="_blank" rel="noopener"><span class="pulse"></span> 573-298-8254</a>
     <button class="nav__burger" aria-label="Open menu">☰</button>
   </div>
 </header>
@@ -72,22 +72,22 @@
     </div>
   </div>
 
-  <form class="form" onsubmit="event.preventDefault(); document.getElementById('form-ok').style.display='block'; this.style.display='none';">
+  <form id="contact-form" class="form">
     <h3>Request a quote</h3>
     <div class="form-row">
       <label>Your name
-        <input type="text" placeholder="e.g. Mike Johnson" required>
+        <input type="text" name="name" placeholder="e.g. Mike Johnson" required>
       </label>
       <label>Phone
-        <input type="tel" placeholder="(555) 123-4567" required>
+        <input type="tel" name="phone" placeholder="(555) 123-4567" required>
       </label>
     </div>
     <label>Email
-      <input type="email" placeholder="mike@truckingco.com" required>
+      <input type="email" name="email" placeholder="mike@truckingco.com" required>
     </label>
     <div class="form-row">
       <label>Equipment
-        <select required>
+        <select name="equipment" required>
           <option value="">Select equipment</option>
           <option>Dry Van</option>
           <option>Reefer</option>
@@ -100,17 +100,16 @@
         </select>
       </label>
       <label>Plan
-        <select required>
+        <select name="plan" required>
           <option value="">Select plan</option>
-          <option>Paperwork Only — $175/wk</option>
-          <option>Basic Dispatch — $425/wk</option>
-          <option>Professional — $695/wk</option>
+          <option>Fixed Weekly Fee</option>
+          <option>Weekly Revenue Share</option>
           <option>Not sure yet</option>
         </select>
       </label>
     </div>
     <label>Tell us about your operation
-      <textarea placeholder="How many trucks? What lanes are you running? What dispatcher do you currently use and what do you want to change?"></textarea>
+      <textarea name="message" placeholder="How many trucks? What lanes are you running? What dispatcher do you currently use and what do you want to change?"></textarea>
     </label>
     <button type="submit" class="btn btn--primary btn--block">Send to dispatch →</button>
     <small style="font-family:var(--mono);font-size:11px;color:var(--text-mute);text-align:center;letter-spacing:.06em;">A real human will respond within 30 minutes.</small>
