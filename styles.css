@@ -1068,16 +1068,20 @@ ul,ol{margin:0;padding:0;list-style:none}
   .team-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width: 720px){
+  body{font-size:15px}
   .ticker{font-size:11px}
-  .hero{padding:60px 20px 80px}
-  .hero__title{font-size:42px}
-  .hero__sub{font-size:16px}
-  .hero__trust{flex-wrap:wrap;gap:20px}
-  .floor,.how,.equipment,.rates,.compare,.proof,.faq,.final{padding:80px 20px}
+  .nav__cta{padding:10px 14px;font-size:11px}
+  .nav__links a{padding:10px 0;font-size:15px}
+  .hero{padding:56px 18px 72px}
+  .hero__title{font-size:clamp(32px, 8.2vw, 48px);line-height:1.04}
+  .hero__sub{font-size:clamp(15px, 4vw, 18px)}
+  .hero__cta{flex-direction:column;align-items:stretch;gap:12px}
+  .hero__trust{flex-direction:column;gap:16px;padding-top:22px}
+  .floor,.how,.equipment,.rates,.compare,.proof,.faq,.final{padding:80px 18px}
   .floor__grid,.equipment__grid,.proof__grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
   .step::after{display:none}
-  .strip__inner{padding:0 20px}
+  .strip__inner{padding:0 18px}
   .final__inner{padding:32px 24px}
   .footer__inner{grid-template-columns:1fr;gap:32px}
   .team-grid{grid-template-columns:1fr}
@@ -1086,13 +1090,30 @@ ul,ol{margin:0;padding:0;list-style:none}
   .float-tag--1{top:-20px;right:10px}
   .float-tag--2{bottom:30px;left:-20px}
   .float-tag--3{display:none}
+  .section-head h2{font-size:clamp(24px, 6.2vw, 32px)}
+  .section-head p,.about-card p,.detail-block p,.faq-item p,.contact-info p,.plan p,.team p{font-size:15px;line-height:1.7}
+  .contact-detail{flex-direction:column;align-items:flex-start;gap:8px}
+  .contact-detail strong{min-width:0}
 }
 @media (max-width: 480px){
-  .nav__inner{padding:12px 16px}
+  .nav__inner{padding:12px 16px;gap:10px}
   .nav__logo{font-size:10px;gap:8px}
   .logo-mark{width:40px;height:40px}
-  .hero__cta{flex-direction:column;align-items:stretch}
-  .btn{justify-content:center}
+  .nav__burger{width:40px;height:40px;font-size:20px}
+  .nav__cta{display:none}
+  .hero{padding:48px 16px 64px}
+  .hero__title{font-size:30px}
+  .hero__sub{font-size:15px}
+  .btn{justify-content:center;width:100%;padding:14px 18px;font-size:14px}
+  .form,.plan,.quote,.about-card,.detail-block,.faq-item,.team{padding:20px 18px}
+  .footer,.footer__inner{padding-left:16px;padding-right:16px}
+}
+@media (max-width: 360px){
+  .nav__inner{padding:10px 14px}
+  .nav__logo{font-size:9px;letter-spacing:.1em}
+  .hero__title{font-size:27px}
+  .hero__sub{font-size:14px}
+  .section-head h2{font-size:22px}
 }
 
 /* Prefers-reduced-motion */
