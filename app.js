@@ -33,21 +33,28 @@
   const links = document.querySelector('.nav__links');
   if(!burger || !links) return;
   let open = false;
+  const closeMenu = () => {
+    open = false;
+    links.style.cssText = '';
+    burger.textContent = '☰';
+  };
   burger.addEventListener('click', () => {
     open = !open;
     if(open){
       links.style.cssText = `
         display:flex;flex-direction:column;gap:14px;position:absolute;
         top:100%;left:0;right:0;background:rgba(10,14,20,.98);
-        padding:20px 32px;border-bottom:1px solid var(--line);
+        padding:20px 24px 24px;border-bottom:1px solid var(--line);
+        box-shadow:0 16px 28px rgba(0,0,0,.24);
         backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
       `;
       burger.textContent = '✕';
     } else {
-      links.style.cssText = '';
-      burger.textContent = '☰';
+      closeMenu();
     }
   });
+  links.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  window.addEventListener('resize', () => { if(window.innerWidth > 1100) closeMenu(); });
 })();
 
 // Reveal-on-scroll
