@@ -1072,11 +1072,26 @@ ul,ol{margin:0;padding:0;list-style:none}
   .ticker{font-size:11px}
   .nav__cta{padding:10px 14px;font-size:11px}
   .nav__links a{padding:10px 0;font-size:15px}
-  .hero{padding:56px 18px 72px}
-  .hero__title{font-size:clamp(32px, 8.2vw, 48px);line-height:1.04}
-  .hero__sub{font-size:clamp(15px, 4vw, 18px)}
-  .hero__cta{flex-direction:column;align-items:stretch;gap:12px}
-  .hero__trust{flex-direction:column;gap:16px;padding-top:22px}
+  .hero{padding:26px 14px 22px;overflow:hidden}
+  .hero__inner{gap:18px}
+  .hero__copy{max-width:100%}
+  .hero__title{font-size:clamp(28px, 7.4vw, 40px);line-height:1.04;margin-bottom:12px}
+  .hero__sub{font-size:15px;margin:0 0 18px;max-width:100%}
+  .hero__cta{flex-direction:column;align-items:stretch;gap:10px;margin-bottom:16px}
+  .hero__trust{flex-direction:column;gap:12px;padding-top:16px}
+  .hero__trust strong{font-size:20px}
+  .hero__scroll{display:none}
+  .cockpit{width:100%;max-width:100%;overflow:hidden}
+  .cockpit__frame{border-radius:16px}
+  .cockpit__bar{padding:10px 12px;font-size:9px;gap:8px;flex-wrap:wrap}
+  .cockpit__bar--bot{font-size:8px;gap:6px;padding:10px 12px}
+  .cockpit__grid{grid-template-columns:1fr;grid-template-rows:auto auto auto auto;min-height:auto}
+  .panel{padding:12px;gap:10px}
+  .route__stats{gap:6px}
+  .route__stats div{padding:8px}
+  .route__stats strong{font-size:13px}
+  .money__big{font-size:26px}
+  .float-tag{display:none}
   .floor,.how,.equipment,.rates,.compare,.proof,.faq,.final{padding:80px 18px}
   .floor__grid,.equipment__grid,.proof__grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
@@ -1101,18 +1116,20 @@ ul,ol{margin:0;padding:0;list-style:none}
   .logo-mark{width:40px;height:40px}
   .nav__burger{width:40px;height:40px;font-size:20px}
   .nav__cta{display:none}
-  .hero{padding:48px 16px 64px}
-  .hero__title{font-size:30px}
-  .hero__sub{font-size:15px}
-  .btn{justify-content:center;width:100%;padding:14px 18px;font-size:14px}
+  .hero{padding:22px 12px 18px}
+  .hero__title{font-size:26px}
+  .hero__sub{font-size:14px}
+  .btn{justify-content:center;width:100%;padding:13px 16px;font-size:14px}
+  .cockpit__path{display:none}
+  .cockpit__time{margin-left:0}
   .form,.plan,.quote,.about-card,.detail-block,.faq-item,.team{padding:20px 18px}
   .footer,.footer__inner{padding-left:16px;padding-right:16px}
 }
 @media (max-width: 360px){
   .nav__inner{padding:10px 14px}
   .nav__logo{font-size:9px;letter-spacing:.1em}
-  .hero__title{font-size:27px}
-  .hero__sub{font-size:14px}
+  .hero__title{font-size:24px}
+  .hero__sub{font-size:13px}
   .section-head h2{font-size:22px}
 }
 
