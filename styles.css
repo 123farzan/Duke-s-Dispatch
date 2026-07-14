@@ -95,7 +95,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 }
 .nav__logo{
   display:flex;align-items:center;gap:12px;
-  font-weight:800;font-size:13px;letter-spacing:.16em;
+  font-weight:800;font-size:16px;letter-spacing:.16em;
   transition:transform var(--t), filter var(--t);
 }
 .nav__logo:hover{transform:translateY(-1px);filter:brightness(1.08)}
