@@ -1154,7 +1154,7 @@ ul,ol{margin:0;padding:0;list-style:none}
   .nav__logo{font-size:10px;gap:8px}
   .logo-mark{width:40px;height:40px}
   .nav__burger{width:40px;height:40px;font-size:20px}
-  .nav__cta{display:none}
+  .nav__cta{display:inline-flex}
   .hero{padding:22px 12px 18px}
   .hero__title{font-size:26px}
   .hero__sub{font-size:14px}
